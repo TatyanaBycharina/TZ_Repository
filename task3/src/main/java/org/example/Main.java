@@ -43,7 +43,7 @@ public class Main {
             arrJSON[i] = (String) testsArr.toArray()[i];
         }
         Files.write(reportFile, arrJSON, StandardCharsets.UTF_8);*/
-        try (FileWriter writer = new FileWriter("C:\\\\Users\\\\tanya\\\\Desktop\\\\TZ_repos\\\\task3\\\\src\\\\main\\\\resources\\\\report.json", false)) {
+        try (FileWriter writer = new FileWriter("./src/main/resources/report.json", false)) {
             String reportJSON = "{" +
                     "\"tests\":" + testsArr.toJSONString() + "}";
             writer.write(reportJSON);
